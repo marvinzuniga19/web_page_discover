@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Maqueta de estudio en HTML y CSS inspirada en la portada de Discover Nicaragua."
+    />
+    <title>Discover · Recreación de diseño</title>
+    <link rel="icon" href="assets/logo.png" type="image/png" sizes="32x32" />
+    <link rel="stylesheet" href="assets/fonts.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body id="inicio">
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <span>☎ (505) 2270 4000</span><span>☎ (505) 8883 2200</span>
+        <div class="social" aria-label="Redes sociales decorativas">
+          <span>f</span><span>𝕏</span><span>◎</span><span>Ⓟ</span><span>▶</span
+          ><span>in</span>
+        </div>
+      </div>
+    </div>
+    <header class="container header">
+      <a class="brand" href="#inicio" aria-label="Inicio"
+        ><img
+          src="assets/logo.png"
+          width="223"
+          height="50"
+          alt="Discover Real Estate"
+        /><small>▣ INVUR-UCBR-PJ-N-0067-2024</small></a
+      >
+      <button
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="navigation"
+        aria-label="Abrir menú"
+      >
+        ☰
+      </button>
+      <nav id="navigation" aria-label="Menú principal">
+        <a class="active" href="#inicio">Inicio</a
+        ><a href="#propiedades">Propiedades</a
+        ><a href="#proyecto">Quiénes somos</a><a href="#contacto">Equipo</a
+        ><a href="#blog">Blog</a><a href="#contacto">Contacto</a
+        ><a class="button enlist" href="#enlistar"
+          >⌂ &nbsp;Enlista tu<br />propiedad</a
+        >
+      </nav>
+    </header>
+    <main>
+      <section class="container hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <h1 id="hero-title">Encuentra La Propiedad Perfecta Para Ti</h1>
+          <form id="search-form">
+            <div
+              class="search-tabs"
+              role="group"
+              aria-label="Modalidad de búsqueda"
+            >
+              <button
+                type="button"
+                class="selected"
+                data-mode="Compra"
+                aria-pressed="true"
+              >
+                Compra</button
+              ><button type="button" data-mode="Alquiler" aria-pressed="false">
+                Alquiler</button
+              ><button
+                type="button"
+                data-mode="Buscar por ID"
+                aria-pressed="false"
+              >
+                Buscar por ID</button
+              ><button
+                type="button"
+                data-mode="Número de rótulo"
+                aria-pressed="false"
+              >
+                Número de rótulo</button
+              ><button
+                type="button"
+                data-mode="Exclusivas Discover"
+                aria-pressed="false"
+              >
+                Exclusivas Discover
+              </button>
+            </div>
+            <div class="search-row">
+              <div class="search-fields">
+                <label class="sr-only" for="property-type"
+                  >Tipo de propiedad</label
+                ><select id="property-type">
+                  <option value="">Tipo de propiedad</option>
+                  <option value="Casas">Casas</option>
+                  <option value="Apartamentos">Apartamentos</option>
+                  <option value="Terrenos">Terrenos</option>
+                  <option value="Oficinas">Oficinas</option>
+                  <option value="Bodegas">Bodegas</option></select
+                ><label class="sr-only" for="location"
+                  >Ubicación o identificador</label
+                ><input
+                  id="location"
+                  placeholder="Ubicación"
+                  autocomplete="off"
+                />
+              </div>
+              <button class="button search-button" type="submit">Buscar</button>
+            </div>
+            <details class="advanced">
+              <summary>Mostrar búsqueda avanzada</summary>
+              <div class="advanced-grid">
+                <label
+                  >Precio mínimo (USD)<input
+                    type="number"
+                    min="0"
+                    placeholder="0" /></label
+                ><label
+                  >Precio máximo (USD)<input
+                    type="number"
+                    min="0"
+                    placeholder="Sin límite" /></label
+                ><label
+                  >Habitaciones<select>
+                    <option>Cualquiera</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3 o más</option>
+                  </select></label
+                ><label
+                  >Baños<select>
+                    <option>Cualquiera</option>
+                    <option>1</option>
+                    <option>2 o más</option>
+                  </select></label
+                >
+              </div>
+            </details>
+            <p id="search-status" class="status" role="status"></p>
+          </form>
+        </div>
+      </section>
+      <section id="propiedades" class="container categories section">
+        <h2>Alquiler Y Venta De Propiedades</h2>
+        <div class="carousel-heading">
+          <button
+            class="arrow"
+            data-direction="-1"
+            aria-label="Categorías anteriores"
+          >
+            ‹</button
+          ><button
+            class="arrow"
+            data-direction="1"
+            aria-label="Categorías siguientes"
+          >
+            ›
+          </button>
+        </div>
+        <div
+          class="category-track"
+          tabindex="0"
+          aria-label="Categorías de propiedades"
+        >
+          <article class="category">
+            <img
+              src="assets/exclusivas.jpg"
+              alt="Residencia exclusiva con jardín"
+              loading="lazy"
+            />
+            <h3>Exclusivas Discover</h3>
+            <a class="button" href="#enlistar">Saber Más</a>
+          </article>
+          <article class="category">
+            <img
+              src="assets/inversion.webp"
+              alt="Propiedad de inversión"
+              loading="lazy"
+            />
+            <h3>Oportunidades de inversión</h3>
+            <a class="button" href="#enlistar">Saber Más</a>
+          </article>
+          <article class="category">
+            <img src="assets/lujo.webp" alt="Casa de lujo" loading="lazy" />
+            <h3>Propiedades de lujo</h3>
+            <a class="button" href="#enlistar">Saber Más</a>
+          </article>
+          <article class="category">
+            <img
+              src="assets/amuebladas.webp"
+              alt="Interior de una vivienda amueblada"
+              loading="lazy"
+            />
+            <h3>Propiedades amuebladas</h3>
+            <a class="button" href="#enlistar">Saber Más</a>
+          </article>
+          <article class="category">
+            <img
+              src="assets/vista.webp"
+              alt="Vivienda con vista panorámica"
+              loading="lazy"
+            />
+            <h3>Propiedades con vista</h3>
+            <a class="button" href="#enlistar">Saber Más</a>
+          </article>
+          <article class="category">
+            <img
+              src="assets/bodegas.webp"
+              alt="Inmueble industrial"
+              loading="lazy"
+            />
+            <h3>Bodegas</h3>
+            <a class="button" href="#enlistar">Saber Más</a>
+          </article>
+        </div>
+      </section>
+      <section class="container exclusive">
+        <img src="assets/banner.png" alt="Residencia moderna" loading="lazy" />
+        <div>
+          <h2>Exclusivamente<br />En Discover</h2>
+          <a class="button button-light" href="#propiedades">Ver Más →</a>
+        </div>
+      </section>
+      <section id="proyecto" class="container project section">
+        <div>
+          <h2>Proyecto <span>ECO</span></h2>
+          <p>
+            Un espacio de oficinas en Managua pensado para conectar negocios,
+            personas y oportunidades.
+          </p>
+          <p>
+            Su ubicación facilita el acceso a las principales vías de la ciudad.
+            El edificio integra estacionamiento y servicios para una jornada de
+            trabajo cómoda.
+          </p>
+          <p>
+            Arquitectura contemporánea, espacios funcionales y áreas comerciales
+            se unen en un mismo proyecto.
+          </p>
+          <a class="button" href="#contacto">Saber Más →</a>
+        </div>
+        <img
+          src="assets/eco.png"
+          alt="Edificio del Proyecto ECO"
+          loading="lazy"
+        />
+      </section>
+      <section id="blog" class="blog section">
+        <div class="container">
+          <h2>Blog</h2>
+          <div class="blog-grid">
+            <article>
+              <img
+                src="assets/blog-1.jpg"
+                alt="Financiamiento de vivienda"
+                loading="lazy"
+              /><small>Blogs</small>
+              <h3>Cómo preparar la compra de tu primera vivienda</h3>
+              <a class="button" href="#contacto">Leer Blog →</a>
+            </article>
+            <article>
+              <img
+                src="assets/blog-2.jpg"
+                alt="Asesoría inmobiliaria"
+                loading="lazy"
+              /><small>Blogs</small>
+              <h3>Ventajas de contar con asesoría inmobiliaria</h3>
+              <a class="button" href="#contacto">Leer Blog →</a>
+            </article>
+            <article>
+              <img
+                src="assets/blog-3.jpg"
+                alt="Un nuevo hogar"
+                loading="lazy"
+              /><small>Blogs</small>
+              <h3>Encuentra un espacio para empezar una nueva etapa</h3>
+              <a class="button" href="#contacto">Leer Blog →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="contacto" class="container footer section">
+      <div>
+        <img
+          class="footer-logo"
+          src="assets/logo.png"
+          alt="Discover Real Estate"
+          loading="lazy"
+        /><small>INVUR-UCBR-PJ-N-0067-2024</small>
+        <p class="demo-note">
+          Recreación de estudio del diseño.<br />Esta maqueta no es el sitio
+          oficial.
+        </p>
+      </div>
+      <div>
+        <h2>CONTÁCTANOS</h2>
+        <p>Villa Fontana, Managua.<br />Edificio Discover I, primera planta.</p>
+        <p>Correo: info@discovernica.com</p>
+        <p>(505) 2270 4000<br />(505) 8883 2200</p>
+      </div>
+      <div id="enlistar">
+        <h2>SUSCRÍBETE A NUESTRO BOLETÍN</h2>
+        <form id="newsletter">
+          <div class="name-fields">
+            <label class="sr-only" for="name">Nombre</label
+            ><input id="name" placeholder="Nombre" required /><label
+              class="sr-only"
+              for="surname"
+              >Apellido</label
+            ><input id="surname" placeholder="Apellido" required />
+          </div>
+          <label class="sr-only" for="email">Correo</label
+          ><input
+            id="email"
+            type="email"
+            placeholder="Correo"
+            required
+          /><button class="button" type="submit">Suscribirse</button>
+          <p id="newsletter-status" role="status"></p>
+        </form>
+      </div>
+    </footer>
+    <div class="copyright container">
+      <span>Maqueta HTML + CSS · Inspirada en Discover Nicaragua</span
+      ><a href="#inicio" aria-label="Volver al inicio">↑</a>
+    </div>
+  </body>
+</html>
